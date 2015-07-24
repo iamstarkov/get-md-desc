@@ -14,30 +14,39 @@
 ## Usage
 
 ```js
-import getMdDesc from 'get-md-desc';
+import getDesc from 'get-md-desc';
 
-getMdDesc('unicorns'); // unicorns
+const input = `
+# title
+
+Published yesterday
+
+Or in 21 december 2012
+
+True *description*
+`.trim();
+
+getDesc(/Published|december/, input).text; // True description
+getDesc(/Published|december/, input).html; // True <em>description</em>
 ```
 
 ## API
 
-### getMdDesc(input, [options])
+### getDesc(exclude, input)
+
+#### exclude
+
+*Required*  
+Type: `String` or `RegExp`
+
+Pattern, which description should not have.
 
 #### input
 
 *Required*  
 Type: `String`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `Boolean`  
-Default: `false`
-
-Lorem ipsum.
+Markdown string.
 
 ## License
 
