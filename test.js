@@ -11,11 +11,17 @@ Or in 21 december 2012
 True *description*
 `.trim();
 
+it('should getDesc simple', () =>
+  equal(getDesc(input).text, 'Published yesterday'));
+
+it('should getDesc firstMatch', () =>
+  equal(getDesc(input, /december/).text, 'Published yesterday'));
+
 it('should getDesc text', () =>
-  equal(getDesc(/Published|december/, input).text, 'True description'));
+  equal(getDesc(input, /Published|december/).text, 'True description'));
 
 it('should getDesc html', () =>
-  equal(getDesc(/Published|december/, input).html, 'True <em>description</em>'));
+  equal(getDesc(input, /Published|december/).html, 'True <em>description</em>'));
 
 it('should getDesc undefined', () =>
-  equal(getDesc(/Published|december/, ''), undefined));
+  equal(getDesc('', /Published|december/), undefined));

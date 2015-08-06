@@ -26,22 +26,17 @@ Or in 21 december 2012
 True *description*
 `.trim();
 
-getDesc(/Published|december/, input).text; // True description
-getDesc(/Published|december/, input).html; // True <em>description</em>
-getDesc(/Published|december/, input).node; // AST node, see commonmark API
-getDesc(/Published|december/, '');         // undefined ¯\_(ツ)_/¯
+getDesc(input).text;                       // Published yesterday
+getDesc(input, /december/).text;           // Published yesterday
+getDesc(input, /Published|december/).text; // True description
+getDesc(input, /Published|december/).html; // True <em>description</em>
+getDesc(input, /Published|december/).node; // AST node, see commonmark API
+getDesc('',    /Published|december/);      // undefined ¯\_(ツ)_/¯
 ```
 
 ## API
 
-### getDesc(exclude, input)
-
-#### exclude
-
-*Required*  
-Type: `String` or `RegExp`
-
-Pattern, which description should not have.
+### getDesc(input, [exclude])
 
 #### input
 
@@ -49,6 +44,13 @@ Pattern, which description should not have.
 Type: `String`
 
 Markdown string.
+
+#### exclude
+
+Type: `String` or `RegExp`  
+Default: `null`
+
+Pattern, which paragraph of description should not have.
 
 ## License
 
