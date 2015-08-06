@@ -28,6 +28,8 @@ True *description*
 
 getDesc(/Published|december/, input).text; // True description
 getDesc(/Published|december/, input).html; // True <em>description</em>
+getDesc(/Published|december/, input).node; // AST node, see commonmark API
+getDesc(/Published|december/, '');         // undefined ¯\_(ツ)_/¯
 ```
 
 ## API
