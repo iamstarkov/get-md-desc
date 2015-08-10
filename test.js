@@ -8,8 +8,7 @@ Published yesterday
 
 Or in 21 december 2012
 
-True *description*
-`.trim();
+True *description*`;
 
 it('should getDesc simple', () =>
   equal(getDesc(input).text, 'Published yesterday'));

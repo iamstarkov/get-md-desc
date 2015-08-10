@@ -23,8 +23,7 @@ Published yesterday
 
 Or in 21 december 2012
 
-True *description*
-`.trim();
+True *description*`;
 
 getDesc(input).text;                       // Published yesterday
 getDesc(input, /december/).text;           // Published yesterday
@@ -50,7 +49,7 @@ Markdown string.
 Type: `String` or `RegExp`  
 Default: `null`
 
-Pattern, which paragraph of description should not have.
+Pattern, which paragraph of description should not contain.
 
 ## Related
 
