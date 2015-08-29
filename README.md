@@ -19,6 +19,8 @@ import getDesc from 'get-md-desc';
 const input = `
 # title
 
+* nope
+
 Published yesterday
 
 Or in 21 december 2012
