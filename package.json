@@ -1,6 +1,6 @@
 {
   "name": "get-md-desc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "get description from markdown article",
   "main": "index.es5.js",
   "scripts": {
