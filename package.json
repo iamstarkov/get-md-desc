@@ -33,7 +33,7 @@
   "homepage": "https://github.com/iamstarkov/get-md-desc#readme",
   "devDependencies": {
     "babel": "*",
-    "coveralls": "*",
+    "coveralls": ">=3.0.0",
     "assert": "*",
     "isparta": "*",
     "mocha": "*"
